@@ -1,22 +1,21 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include<math.h>
-
-int main()
+#include<stdio.h>
+#define mod 1000000007
+void main()
 {
-    int num,i,j,arr[1000];
-    long answer=1;
-    printf("Enter a number\n");
-    scanf("%d",&num);
-    for(i=0;i<num;i++)
+    int N;
+    scanf("%d",&N);
+    if(N>=1&&N<=1000)
     {
-    scanf("%d",&arr[i]);
-    }
-
-    for(j=0;j<num;j++)
+          int i,A[N];
+          long long int answer=1;
+         for(i=0;i<N;i++)
     {
-    answer=(answer*arr[j])%(int)((pow(10,9))+7);
+        scanf("%d",&A[i]);
     }
-    printf("%ld",answer);
-    return 0;
+        for(i=0;i<N;i++)
+    {
+        answer=(answer*A[i])%(mod);
+    }
+    printf("%d",answer);
+    }
 }
